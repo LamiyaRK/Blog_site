@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+.slick-dots.slick-thumb li {
+  width: 10%;
+  height: 90px;
+   margin: 0;
+}
+ .slick-dots.slick-thumb {
+        position: absolute;
+        bottom: -5%; /* Move thumbnails up */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex !important;
+        justify-content: center;
+        gap: 1rem;
+        z-index: 10;
+        
+      }
+
+      .slick-dots.slick-thumb li img {
+      
+        border-radius: 8px;
+        object-fit: cover;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      }
+
+      .slick-dots.slick-thumb li.slick-active img {
+        border: 2px solid #000;
+      }
+
