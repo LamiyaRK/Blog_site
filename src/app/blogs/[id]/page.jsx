@@ -6,10 +6,10 @@ import UnlockFrom from './components/UnlockFrom';
 import BlogContent from './components/BlogContent';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/authOptions';
-
+export const dynamic = "force-dynamic";
 export default async function BlogDetailsPage({params}) {
     const p=await params;
-    const res=await fetch(`http://localhost:3000/api/service/${p.id}`)
+    const res=await fetch(`https://blog-site-sigma-puce.vercel.app/api/service/${p.id}`)
     const blogdata=await res.json()
      const session=await getServerSession(authOptions)
    

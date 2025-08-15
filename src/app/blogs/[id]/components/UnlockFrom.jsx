@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import BlogContent from "./BlogContent";
-
+export const dynamic = "force-dynamic";
 export default function UnlockFrom({ blog }) {
   const { data: session } = useSession();
   
@@ -23,7 +23,7 @@ export default function UnlockFrom({ blog }) {
       return;
     }
     async function checkPurchase() {
-      const res = await fetch(`/api/checkPurchase?blogid=${blog._id}&email=${session.user.email}`);
+      const res = await fetch(`https://blog-site-sigma-puce.vercel.app/api/checkPurchase?blogid=${blog._id}&email=${session.user.email}`);
       const data = await res.json();
       setHasAccess(data.hasAccess);
       setLoading(false);
@@ -51,7 +51,7 @@ export default function UnlockFrom({ blog }) {
       blogimage: blog.image,
     };
 
-    const response = await fetch("/api/service", {
+    const response = await fetch("https://blog-site-sigma-puce.vercel.app/api/service", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),

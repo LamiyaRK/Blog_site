@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
+export const dynamic = "force-dynamic";
 export default async function LatestBlogs() {
-    const res=await fetch('http://localhost:3000/api/latest')
+    const res=await fetch('https://blog-site-sigma-puce.vercel.app/api/latest')
 const data=await res.json()
   return (
     <div>

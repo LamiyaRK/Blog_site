@@ -13,7 +13,7 @@ export default async function Double() {
     const [data1,...data2]=data
     
   return (
-    <div className='relative max-w-7xl mx-auto'>
+    <div className='relative max-w-7xl w-5/6 mx-auto'>
     <div className='text-center'>
       <p className="text-sm text-[#08528b] "><i className="text-gray-400 mr-2">in</i>{data1.category}</p>
       <h2 className="text-5xl  font-bold mt-4 my-4">{data1.title}</h2>

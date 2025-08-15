@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { IoIosArrowDropleft, IoIosArrowDropright} from "react-icons/io";
+
 export default function BlogCarousel({ blogs }) {
   const sliderRef = useRef(null);
 
@@ -31,7 +32,7 @@ export default function BlogCarousel({ blogs }) {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8 border border-gray-200">
+    <div className="w-full max-w-7xl w-5/6 mx-auto px-4 py-8 border border-gray-200">
       <Slider ref={sliderRef} {...settings}>
         {blogs.map((blog) => (
           <div key={blog.id} className="px-4 transition-transform duration-500">

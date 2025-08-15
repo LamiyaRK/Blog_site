@@ -34,7 +34,7 @@ export const PATCH=async(req,{params})=>{
       const p=await params;
     const blogcol=dbConnect('blogs')
     const session=await getServerSession(authOptions)
-    console.log(session)
+   
     const finduser=await blogcol.findOne({_id:new ObjectId(p.id)})
      if(finduser.email==session?.user?.email)
     {    const body=await req.json()

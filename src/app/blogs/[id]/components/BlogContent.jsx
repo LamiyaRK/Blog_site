@@ -5,7 +5,7 @@ export default function BlogContent({ blog }) {
   const { image, title, date, category, tags, content, excerpt, likes } = blog;
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl w-5/6 mx-auto">
       <div className="grid grid-cols-2 items-end border">
         <div className="space-y-3 pl-5 pb-5">
           <p className="font-semibold">{date}</p>

@@ -7,7 +7,7 @@ import SideHome from "./Components/SideHome";
 import Instagram from "./Components/Instagram";
 import Footer from "@/Components/Footer";
 import { ToastContainer } from "react-toastify";
-
+export const dynamic = "force-dynamic";
 export default function Home() {
   return (
     <div>
@@ -15,7 +15,7 @@ export default function Home() {
      
      
       <Popular></Popular>
-       <div className="flex max-w-7xl mx-auto justify-between gap-5">
+       <div className="flex max-w-7xl w-5/6 mx-auto justify-between gap-5">
        <div className="w-[65%]">
       <Double></Double>
       

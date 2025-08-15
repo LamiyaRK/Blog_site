@@ -2,7 +2,7 @@
 import { useSession } from "next-auth/react";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-
+export const dynamic = "force-dynamic";
 export default function BlogPostForm() {
   const { data: session } = useSession();
   const [formData, setFormData] = useState({
@@ -44,8 +44,8 @@ export default function BlogPostForm() {
       tags: tagsArray,
       likes: 0, // force likes to 0
     };
-console.log(payload)
-   const response = await fetch("/api/blogs", {
+
+   const response = await fetch("https://blog-site-sigma-puce.vercel.app/api/blogs", {
          method: "POST",
          headers: { "Content-Type": "application/json" },
          body: JSON.stringify(payload),
@@ -68,7 +68,7 @@ console.log(payload)
     
     <form
       onSubmit={handleSubmit}
-      className="max-w-7xl mx-auto p-10 border-3 border-[#318892]  rounded-lg shadow-md space-y-6 my-10"
+      className="max-w-7xl w-5/6 mx-auto p-10 border-3 border-[#318892]  rounded-lg shadow-md space-y-6 my-10"
     >
      
 

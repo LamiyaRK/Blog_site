@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Swal from 'sweetalert2'
-
+export const dynamic = "force-dynamic";
 export default  function DeleteButton({delid}) {
     const router=useRouter()
     const handleDelete=async(delid)=>{
@@ -16,7 +16,7 @@ export default  function DeleteButton({delid}) {
   confirmButtonText: "Yes, delete it!"
 }).then(async(result) => {
   if (result.isConfirmed) {
-    const res=await fetch(`http://localhost:3000/api/service/${delid}`,{
+    const res=await fetch(`https://blog-site-sigma-puce.vercel.app/api/service/${delid}`,{
             method:'DELETE',
             
         })

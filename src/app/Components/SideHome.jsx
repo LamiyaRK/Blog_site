@@ -2,6 +2,7 @@ import React from 'react'
 import LatestBlogs from './LatestBlogs'
 import Image from 'next/image'
 import { RiCheckboxBlankCircleLine } from "react-icons/ri";
+export const dynamic = "force-dynamic";
 export default async function SideHome() {
   const pics=[
     {
@@ -29,7 +30,7 @@ export default async function SideHome() {
       pic:'/assets/sincerely-media-ylveRpZ8L1s-unsplash.webp'
     },
   ]
-    const res=await fetch('http://localhost:3000/api/categories')
+    const res=await fetch('https://blog-site-sigma-puce.vercel.app/api/categories')
 const data=await res.json()
   return (
     <div>

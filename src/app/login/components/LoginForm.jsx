@@ -17,7 +17,7 @@ export default function LoginForm() {
                try{
        const res= await signIn("credentials",{email,password,redirect:false})
        if(res.ok)
-       { 
+       { toast.success("Login successful!");
              router.push('/')
              formData.reset()
              

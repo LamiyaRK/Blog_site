@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+export const dynamic = "force-dynamic";
 export default async function BlogsPage() {
-  const res = await fetch("http://localhost:3000/api/blogsall");
+  const res = await fetch("https://blog-site-sigma-puce.vercel.app/api/blogsall");
   const data = await res.json();
- console.log(data)
+ 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl w-5/6 mx-auto">
       <h2 className="text-4xl font-semibold mb-4 text-center my-20">All Articles & Insights</h2>
     <div className="grid grid-cols-3 gap-6  p-6 ">
       {data.map((dat) => (

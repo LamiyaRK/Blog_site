@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-
+export const dynamic = "force-dynamic";
 export default function UpdateForm({ blogdata }) {
     const router=useRouter()
   const { data: session } = useSession();
@@ -63,7 +63,7 @@ export default function UpdateForm({ blogdata }) {
     };
 
     try {
-      const response = await fetch(`/api/service/${blogdata._id}`, {
+      const response = await fetch(`https://blog-site-sigma-puce.vercel.app/api/service/${blogdata._id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -91,7 +91,7 @@ export default function UpdateForm({ blogdata }) {
 
       <form
         onSubmit={handleSubmit}
-        className="max-w-7xl mx-auto p-10 border-3 border-[#318892] rounded-lg shadow-md space-y-6 my-10"
+        className="max-w-7xl w-5/6 mx-auto p-10 border-3 border-[#318892] rounded-lg shadow-md space-y-6 my-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Title */}

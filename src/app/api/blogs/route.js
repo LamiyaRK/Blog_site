@@ -7,7 +7,7 @@ import { authOptions } from "@/lib/authOptions";
 
 export const GET=async(req)=>{
    const session=await getServerSession(authOptions)
-   console.log(session)
+  
    if(session)
    { 
       const email=session?.user?.email
