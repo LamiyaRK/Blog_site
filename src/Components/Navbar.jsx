@@ -17,6 +17,7 @@ export default function Navbar() {
 
   const list1 = <>
     <li><Link href='/'>Home</Link></li>
+    <li><Link href='/userlog'>User Activity</Link></li>
     <li><Link href='/blogs'>All Blogs</Link></li>
     <li><Link href='/addBlogs'>Add Blog</Link></li>
     <li><Link href='/myBlogs'>My Blogs</Link></li>
@@ -25,7 +26,7 @@ export default function Navbar() {
   </>
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +41,7 @@ export default function Navbar() {
             {status === 'authenticated' ? list1 : list}
           </ul>
         </div>
-        <Link href='/' className="text-4xl font-medium">
+        <Link href='/' className="text-2xl sm:text-4xl font-medium">
           <span className='font-bold'>INK</span>Sphere
         </Link>
       </div>
@@ -53,7 +54,7 @@ export default function Navbar() {
 
       <div className="navbar-end">
         {status === 'authenticated' ? (
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center gap-2 '>
             <Image src={data?.user?.image} width={50} height={50} alt='userimage' className='rounded-full' />
             <button
               onClick={() => {

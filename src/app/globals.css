@@ -2,11 +2,7 @@
 @plugin "daisyui" {
   themes: light --default;
 }
-.slick-dots.slick-thumb li {
-  width: 10%;
-  height: 90px;
-   margin: 0;
-}
+
  .slick-dots.slick-thumb {
         position: absolute;
         bottom: -5%; /* Move thumbnails up */
@@ -30,3 +26,43 @@
         border: 2px solid #000;
       }
 
+.slick-dots.slick-thumb li {
+  width: 10%;
+  height: 90px;
+  margin: 0;
+}
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .slick-dots.slick-thumb li {
+    width: 15%;
+    height: 70px;
+  }
+   .slick-dots.slick-thumb {
+        position: absolute;
+        bottom: -2%; /* Move thumbnails up */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex !important;
+        justify-content: center;
+        gap: 1rem;
+        z-index: 10;
+        
+      }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .slick-dots.slick-thumb li {
+    width: 20%;
+    height: 60px;
+  }
+}
+
+/* Small mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .slick-dots.slick-thumb li {
+    width: 25%;
+    height: 50px;
+  }
+}

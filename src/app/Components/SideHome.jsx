@@ -37,7 +37,7 @@ const data=await res.json()
     <Image
         src={'https://i.ibb.co.com/99WY54h2/morgane-le-breton-rq-Ir5y-FIa-Gc-unsplash.jpg'}
         height={500}
-        width={500}
+        width={1000}
         alt='garden'
         className='object-cover h-[500px] object-center'
     />
@@ -47,7 +47,7 @@ const data=await res.json()
         <Image
         src={'https://i.ibb.co.com/vCHRqFPC/kyle-loftus-32iq-GBun-A-U-unsplash.webp'}
         height={500}
-        width={500}
+        width={1000}
         alt='man'
         className='object-cover h-[300px] object-center'
     />

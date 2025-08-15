@@ -70,6 +70,7 @@ export default function UpdateForm({ blogdata }) {
       });
 
       const result = await response.json();
+    
 
       if (result.modifiedCount > 0) {
         toast.success("Blog Updated Successfully!");

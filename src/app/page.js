@@ -15,17 +15,17 @@ export default function Home() {
      
      
       <Popular></Popular>
-       <div className="flex max-w-7xl w-5/6 mx-auto justify-between gap-5">
-       <div className="w-[65%]">
+       <div className="xl:flex max-w-7xl w-5/6 mx-auto justify-between gap-10">
+       <div className="w-full xl:w-[65%]">
       <Double></Double>
       
       </div>
-      <div className="w-[30%]">
+      <div className="w-full xl:w-[30%]">
       <SideHome></SideHome>
       </div>
       </div>
       <Instagram></Instagram>
-      <Footer></Footer>
+      
      
     </div>
     

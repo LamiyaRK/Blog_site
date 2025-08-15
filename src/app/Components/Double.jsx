@@ -42,16 +42,9 @@ export default async function Double() {
           
           </div>
           </div>
-         <div className='grid grid-cols-2 grid-rows-8 gap-10'>
+         <div className='grid lg:grid-cols-2  gap-5 mb-20'>
             {data2.map((dat,index)=>{
-                if(index==0||index==3||index==4)
-                {
-                   return <div key={dat._id} className='row-span-2'><FeatureCardSamll dat={dat} ></FeatureCardSamll></div>
-                }
-                else
-                {
-                    return <div key={dat._id} className='row-span-3'><FeatureCardBig dat={dat} ></FeatureCardBig></div>
-                }
+               return <div key={dat._id} ><FeatureCardSamll dat={dat} ></FeatureCardSamll></div>
             })}
          </div>
     </div>

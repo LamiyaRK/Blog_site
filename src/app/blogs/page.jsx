@@ -9,7 +9,7 @@ export default async function BlogsPage() {
   return (
     <div className="max-w-7xl w-5/6 mx-auto">
       <h2 className="text-4xl font-semibold mb-4 text-center my-20">All Articles & Insights</h2>
-    <div className="grid grid-cols-3 gap-6  p-6 ">
+    <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6  p-6 ">
       {data.map((dat) => (
       <Link href={`/blogs/${dat._id}` } key={dat._id}>  <div   className=" p-3 rounded-lg border border-gray-200 ">
           <div className="flex gap-5 items-center">

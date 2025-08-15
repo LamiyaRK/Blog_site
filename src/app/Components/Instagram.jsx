@@ -29,7 +29,7 @@ export default function Instagram() {
     },
   ]
   return (
-    <div className='grid grid-cols-6 mt-20'>
+    <div className='grid md:grid-cols-3 lg:grid-cols-6 mt-20'>
           {pics.map(pi => (
             <div key={pi.id}>
               <Image 
