@@ -3,29 +3,44 @@ import React from "react";
 import Link from "next/link";
 import registerUser from "@/app/actions/auth/registerUser";
 import SocialLogin from "@/app/login/components/SocialLogin";
+import { toast } from "react-toastify";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function RegisterForm() {
+   const router=useRouter()
   const handleFormData = async (e) => {
-    e.preventDefault();
-    const formData = e.target;
-    const name = formData.name.value.trim();
-    const photo = formData.photo.value.trim();
-    const email = formData.email.value.trim();
-    const password = formData.password.value;
+  e.preventDefault();
+  const formData = e.target;
+  const name = formData.name.value.trim();
+  const photo = formData.photo.value.trim();
+  const email = formData.email.value.trim();
+  const password = formData.password.value;
 
-    try {
-      const res = await registerUser({ name, photo, email, password });
-      console.log("idk user",res)
-      if (res) {
-        console.log("✅ Registration successful:", res);
-        // redirect or toast here
+  try {
+    const res = await registerUser({ name, photo, email, password });
+    if (res) {
+      
+      
+      // Automatically log the user in
+      console.log("before",email,password)
+     const loginRes= await signIn("credentials",{email,password,redirect:false})
+console.log("why not working",loginRes)
+      if (loginRes.ok) {
+         router.push('/')
+             formData.reset()
+       toast.success("Registration successful");
+        
       } else {
-        console.error("❌ Registration failed: User may already exist");
+        toast.error("❌ Auto login failed");
       }
-    } catch (error) {
-      console.error("❌ Error registering:", error);
+    } else {
+      toast.error("❌ Registration failed: User may already exist");
     }
-  };
+  } catch (error) {
+    toast.error("❌ Error registering:", error);
+  }
+};
 
   return (
     <div>

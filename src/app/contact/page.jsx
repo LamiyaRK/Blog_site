@@ -3,11 +3,11 @@ import { TfiEmail, TfiHeadphoneAlt } from "react-icons/tfi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 const Contact = () => {
     return (
-        <div className='w-5/6 max-w-[1600px] mx-auto relative inset-0 py-10'>
-            <p  className='text-center text-secondary font-bold text-2xl'>Contact</p>
-            <h1 className='text-center'>Stay In Touch With Relicrader </h1>
+        <div className='w-5/6 max-w-[1600px] mx-auto relative inset-0 my-20'>
+            <p  className='text-center text-[#318892] font-bold text-2xl'>Contact</p>
+            <h1 className='text-center'>Stay In Touch With InkSphere </h1>
              <div className='relative mt-[80px] flex flex-wrap  justify-center gap-5 text-center'>
-                <div className='text-neutral relative h-[200px] w-[300px] border-2 flex flex-col bg-accent items-center  '>
+                <div className='text-neutral relative h-[200px] w-[300px] border-2 flex flex-col bg-gradient-to-br from-[#318892] via-[#a5d6ce] to-white items-center  '>
                
                       <div className="avatar avatar-placeholder absolute -top-10 ">
   <div className="bg-neutral text-neutral-content w-24 rounded-full">
@@ -21,7 +21,7 @@ const Contact = () => {
 </div>
                     
                 </div>
-                 <div className='text-neutral relative h-[200px] w-[300px] border-2 flex flex-col items-center bg-accent'>
+                 <div className='text-neutral relative h-[200px] w-[300px] border-2 flex flex-col items-center bg-gradient-to-br from-[#318892] via-[#a5d6ce] to-white'>
                
                       <div className="avatar avatar-placeholder absolute -top-10 ">
   <div className="bg-neutral text-neutral-content w-24 rounded-full">
@@ -35,7 +35,7 @@ const Contact = () => {
 </div>
                     
                 </div>
-                 <div className='text-neutral relative h-[200px] w-[300px] border-2 flex flex-col items-center bg-accent'>
+                 <div className='text-neutral relative h-[200px] w-[300px] border-2 flex flex-col items-center bg-gradient-to-br from-[#318892] via-[#a5d6ce] to-white'>
                
                       <div className="avatar avatar-placeholder absolute -top-10 ">
   <div className="bg-neutral text-neutral-content w-24 rounded-full">
@@ -64,7 +64,7 @@ const Contact = () => {
   <input type="text" className="input bg-white w-full "  placeholder="Subject" />
     <label className="label">Message</label> 
 <textarea className="textarea bg-white w-full h-[100px] " placeholder="Your Message"></textarea>
-  <button className="btn btn-neutral mt-4 ">Submit Now</button>
+  <button className="btn bg-[#318892] text-white mt-4 ">Submit Now</button>
 </fieldset>
 </div>
         </div>

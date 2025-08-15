@@ -19,6 +19,7 @@ export default async function registerUser(payload) {
     password: hashedpassword,
   };
         const result=await usercol.insertOne(newUser);
+        console.log("result of register",result)
         result.insertedId=result.insertedId.toString()
         return result;
     }

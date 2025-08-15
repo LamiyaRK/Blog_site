@@ -1,5 +1,6 @@
 import React from 'react';
 import Timeline from './components/Timeline';
+import Image from 'next/image';
 
 
 const Aboutus = () => {
@@ -10,7 +11,7 @@ const Aboutus = () => {
     title: "Blog Idea Sparked",
     description:
       "We noticed a gap in platforms where passionate writers could share long-form stories and insights easily. That’s when the idea of BlogSphere was born.",
-    image: "/blog1.webp",
+    image: "/assets/blog1.webp",
   },
   {
     index: 2,
@@ -18,7 +19,7 @@ const Aboutus = () => {
     title: "Building the Platform",
     description:
       "We started developing a user-friendly blogging platform using React and Firebase. Focused on simplicity, fast performance, and a smooth writing experience.",
-    image: "/blog2.webp",
+    image: "/assets/blog2.webp",
   },
   {
     index: 3,
@@ -26,7 +27,7 @@ const Aboutus = () => {
     title: "Community & Features",
     description:
       "Introduced categories, comment sections, and a recommendation system. Writers and readers could connect more meaningfully, creating a growing community.",
-    image: "/blog3.webp",
+    image: "/assets/blog3.webp",
   },
   {
     index: 4,
@@ -34,7 +35,7 @@ const Aboutus = () => {
     title: "Going Live",
     description:
       "BlogSphere officially launched with a polished interface, mobile responsiveness, and a vibrant blog community. New features like analytics and editor tools are continuously added.",
-    image: "/blog4.webp",
+    image: "/assets/blog4.webp",
   },
 ];
 
@@ -42,11 +43,11 @@ const Aboutus = () => {
 
     return (
         <div className='w-5/6 max-w-[1600px] mx-auto relative inset-0 py-10'>
-        <h2 className='text-4xl  text-neutral text-center '>About Us</h2>
+        <h2 className='text-4xl  text-neutral text-center my-20'>About Us</h2>
          <div className='flex lg:flex-row flex-col-reverse justify-between mb-[120px] inset-0 lg:h-[1000px] text-neutral'>
          <div className='lg:w-[40%] text-lg space-y-6'>
          <div className='space-y-6'>
-            <h2 className='text-xl mb-2 text-secondary font-semibold'> — About InkSphere</h2>
+            <h2 className='text-xl mb-2 text-[#318892] font-semibold'> — About InkSphere</h2>
             <h1 className='text-4xl  text-neutral mb-10'> Sharing Stories, One Blog at a Time</h1>
            
            
@@ -58,14 +59,14 @@ const Aboutus = () => {
         </div>
         <div className='w-[300px] sm:w-[600px]  relative inset-0  h-[600px] sm:h-[1000px] mx-auto'>
         <div className='flex justify-end'>
-            <img src='/aboutpat.webp' className='h-[250px] w-[200px] sm:h-[400px] sm:w-[300px] object-center object-cover   '></img>
+            <Image width={500} height={500} src='/assets/aboutbg.avif' alt='aboutbg' className='h-[250px] w-[200px] sm:h-[400px] sm:w-[300px] object-center object-cover' ></Image>
         </div>
          <div className='absolute top-25 lg:top-50 shadow-2xl'>
-          <img src='/aboutban.webp' className='h-[400px] sm:h-[700px] w-[250px] sm:w-[500px] object-center object-cover shadow-2xl shadow-black z-10'></img>
+          <Image width={500} height={500} alt='aboutban'  src='/assets/aboutban.webp' className='h-[400px] sm:h-[700px] w-[250px] sm:w-[500px] object-center object-cover shadow-2xl shadow-black z-10'></Image>
           </div>
         </div>
           </div>
-       <p className='font-semibold text-xl text-center mb-4 text-secondary '>Timeline</p>
+       <p className='font-semibold text-xl text-center mb-4 text-[#318892] '>Timeline</p>
        <h1 className='text-4xl  text-neutral mb-10 text-center'>Our History</h1>
            
         <div >
