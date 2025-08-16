@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import LikeButton from "./LikeButton";
+import CommentSection from "./CommentSection";
 
 export default function BlogContent({ blog }) {
   const { image, title, date, category, tags, content, excerpt, likes } = blog;
@@ -45,6 +46,7 @@ export default function BlogContent({ blog }) {
           ))}
         </div>
       </div>
+      <CommentSection blogId={blog._id} blogOwnerEmail={blog.email}></CommentSection>
     </div>
   );
 }
