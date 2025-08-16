@@ -44,7 +44,7 @@ export default  async function UserActivityPage() {
     {
       data.length>0?(<><h2 className="text-4xl font-semibold mb-4 text-center my-20">Purchased Blogs</h2>
         <div className="overflow-x-auto ">
-  <table className="table border-3 border-[#318892]  rounded-lg shadow-md mt-10 mb-20">
+  <table className="table border-3 border-[#318892]  rounded-lg shadow-md mt-10 mb-205">
     
     <thead>
       <tr className='text-[#318892] text-lg '>

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { IoIosHeartEmpty } from "react-icons/io";
+
+import LikeButton from "./LikeButton";
 
 export default function BlogContent({ blog }) {
   const { image, title, date, category, tags, content, excerpt, likes } = blog;
@@ -30,9 +31,9 @@ export default function BlogContent({ blog }) {
       </div>
 
       <div className="flex justify-between gap-3 items-center mt-4">
-        <div className="flex items-center gap-2">
-          <IoIosHeartEmpty size={20} /> {likes}
-        </div>
+        
+          <LikeButton  blogId={blog._id} initialLikes={likes}/>
+       
         <div className="flex items-center gap-2">
           {tags.map((tag, index) => (
             <i
