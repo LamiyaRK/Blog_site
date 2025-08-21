@@ -7,19 +7,23 @@ export default function ({dat}) {
     
   return (
     <div>
-      <div className='text-center lg:h-[750px] flex flex-col max-w-7xl'>
-             
+      <div className='text-center h-[770px] flex flex-col max-w-7xl'>
+             <div></div>
              <p className="text-sm mb-10"><span className="text-gray-400 mr-2 ">{dat.date} -</span>5 comments</p>
+
+             <div className='h-full'>
                   <Image
                            src={dat.image}
                            alt={dat.title}
-                           height={500}
+                           height={450}
                            width={500}
-                           className="w-full h-[300px] lg:h-[450px] object-cover object-center"
+                           className="w-full h-[300px] lg:h-[450px]  object-cover object-center"
                          />
+                         </div>
+                         
                  <p className="text-sm text-[#08528b] "><i className="text-gray-400 mr-2">in</i>{dat.category}</p>
-             <h2 className="text-2xl  font-bold mt-4 my-4 flex-1">{dat.title}</h2>
-                 <p className="mt-4  text-lg ">
+             <h2 className="text-2xl  font-bold mt-4 my-4 ">{dat.title}</h2>
+                 <p className="mt-4 h-full text-lg flex-1 flex-grow">
                    {dat.excerpt}
                  </p>
                  

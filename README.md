@@ -38,3 +38,6 @@ Open http://localhost:3000
 Live Demo
 
 [\[Live Link\]](https://blog-site-sigma-puce.vercel.app/)
+
+Testing email : test@test.com
+Testing pass:123456
