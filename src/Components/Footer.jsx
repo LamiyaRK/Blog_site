@@ -13,11 +13,35 @@ export default function Footer() {
   return (
     <div className='py-20 bg-black'>
         <div className='flex justify-center items-center gap-5 text-white'>
-          <div className='p-3 rounded-full bg-white/10 '><FaFacebookF size={30} /></div>  
-           <div className='p-3 rounded-full bg-white/10'><FaXTwitter size={30}/></div>  
-           <div className='p-3 rounded-full bg-white/10'><FaSquareInstagram size={30}/></div>  
-            <div className='p-3 rounded-full bg-white/10'> <FaPinterestP size={30}/></div>
-            <div className='p-3 rounded-full bg-white/10'><FaHeart size={30}/></div> 
+           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <div className='p-3 rounded-full bg-white/10'>
+          <FaFacebookF size={30} />
+        </div>
+      </a>
+
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <div className='p-3 rounded-full bg-white/10'>
+          <FaXTwitter size={30}/>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <div className='p-3 rounded-full bg-white/10'>
+          <FaSquareInstagram size={30}/>
+        </div>
+      </a>
+
+      <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
+        <div className='p-3 rounded-full bg-white/10'>
+          <FaPinterestP size={30}/>
+        </div>
+      </a>
+
+      <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+        <div className='p-3 rounded-full bg-white/10'>
+          <FaHeart size={30}/>
+        </div>
+      </a>
         </div>
         <div className="navbar-center hidden lg:flex ">
     <ul className="menu menu-horizontal px-1 text-lg font-semibold mx-auto my-5 text-white">

@@ -35,7 +35,7 @@ export default function Banner() {
 
 
   return (
-    <div>
+    <div >
     {
         <CustomPaging blogs={blogs}></CustomPaging>
     }

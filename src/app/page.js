@@ -16,7 +16,7 @@ export default function Home() {
      
       <Popular></Popular>
        <div className="xl:flex max-w-7xl w-5/6 mx-auto justify-between gap-10">
-       <div className="w-full xl:w-[65%]">
+       <div className="w-full xl:w-[70%]">
       <Double></Double>
       
       </div>
